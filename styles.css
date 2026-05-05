@@ -4,7 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Cormorant Garamond", sans-serif;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.08rem;
 }
 
 a {
@@ -15,6 +15,7 @@ body {
   background-color: #111113;
   height: 100vh;
   color: #ddd;
+  line-height: 1.4;
 }
 
 /* Navbar */
@@ -31,6 +32,7 @@ body {
   display: flex;
   justify-content: space-around;
   color: rgba(249, 192, 67, 0.7);
+  margin-bottom: 80px;
 }
 
 .navbar-logo-container {
@@ -92,48 +94,54 @@ body {
 
 .build-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
 }
 
 /* Equipment */
 
 .equipment-container {
-  position: relative;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 800px;
-  width: 50%;
+  max-height: 800px;
+  max-width: 1000px;
+  height: 100%;
+  width: 100%;
   padding: 16px;
+  gap: 20px;
 }
 
 .equipment-container > h2 {
-  position: absolute;
-  top: 80px;
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 500;
   color: #c6a85a;
+  margin-bottom: 20px;
 }
 
-.equipment-container .equipment-character {
-  position: absolute;
-  right: 80px;
+.equipment-container .equipment-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.equipment-container .equipment-content .equipment-character {
   height: 500px;
   width: 500px;
   background-image: url(./images/player.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  filter: brightness(0) drop-shadow(0 0 18px rgba(212, 175, 55, 0.6));
+  filter: brightness(0) drop-shadow(0 0 25px rgba(212, 175, 55, 0.8));
 }
 
-.equipment-container .equipment-items-container {
-  position: absolute;
-  top: 150px;
-  left: 100px;
+.equipment-container .equipment-content .equipment-items-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(80, 120px));
   gap: 12px;
   grid-template-areas:
     "weapon1 weapon2 weapon3 ."
@@ -142,7 +150,10 @@ body {
     "talisman1 talisman2 talisman3 talisman4";
 }
 
-.equipment-container .equipment-items-container .equipment-item {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item {
   background: linear-gradient(
     140deg,
     rgba(255, 255, 255, 0.1) 22%,
@@ -154,72 +165,106 @@ body {
   height: 120px;
 }
 
-.equipment-container .equipment-items-container .equipment-item.weapon-slot1 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.weapon-slot1 {
   grid-area: weapon1;
 }
 
-.equipment-container .equipment-items-container .equipment-item.weapon-slot2 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.weapon-slot2 {
   grid-area: weapon2;
 }
 
-.equipment-container .equipment-items-container .equipment-item.weapon-slot3 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.weapon-slot3 {
   grid-area: weapon3;
 }
 
-.equipment-container .equipment-items-container .equipment-item.ranged-slot1 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.ranged-slot1 {
   grid-area: ranged1;
 }
 
-.equipment-container .equipment-items-container .equipment-item.ranged-slot2 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.ranged-slot2 {
   grid-area: ranged2;
 }
 
-.equipment-container .equipment-items-container .equipment-item.ranged-slot3 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.ranged-slot3 {
   grid-area: ranged3;
 }
 
 .equipment-container
+  .equipment-content
   .equipment-items-container
   .equipment-item.head-armor-slot {
   grid-area: head;
 }
 .equipment-container
+  .equipment-content
   .equipment-items-container
   .equipment-item.chest-armor-slot {
   grid-area: chest;
 }
 .equipment-container
+  .equipment-content
   .equipment-items-container
   .equipment-item.arms-armor-slot {
   grid-area: arms;
 }
 .equipment-container
+  .equipment-content
   .equipment-items-container
   .equipment-item.legs-armor-slot {
   grid-area: legs;
 }
 
-.equipment-container .equipment-items-container .equipment-item.talisman-slot1 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.talisman-slot1 {
   grid-area: talisman1;
 }
 
-.equipment-container .equipment-items-container .equipment-item.talisman-slot2 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.talisman-slot2 {
   grid-area: talisman2;
 }
 
-.equipment-container .equipment-items-container .equipment-item.talisman-slot3 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.talisman-slot3 {
   grid-area: talisman3;
 }
 
-.equipment-container .equipment-items-container .equipment-item.talisman-slot4 {
+.equipment-container
+  .equipment-content
+  .equipment-items-container
+  .equipment-item.talisman-slot4 {
   grid-area: talisman4;
 }
 
 /* Attributes & Leveling */
 
 .atributes-container {
-  width: 600px;
-  margin-left: 10px;
+  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -231,7 +276,6 @@ body {
     rgba(200, 150, 40, 0.6) 100%
   );
   border: 1px solid #b89b4c;
-  margin-top: 80px;
 }
 
 .atributes-container > .stat-container {
@@ -239,6 +283,7 @@ body {
   flex-direction: row;
   font-size: 2rem;
   padding: 12px;
+  gap: 15px;
   color: #c6a85a;
 }
 
@@ -253,8 +298,6 @@ body {
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
 .atributes-container > .stat-container > i {
@@ -271,10 +314,9 @@ body {
     rgba(200, 150, 40, 0.6) 100%
   );
   border: 1px solid #b89b4c;
-  margin-left: 30px;
-  margin-top: 80px;
   padding: 18px;
-  width: 500px;
+  width: 100%;
+  max-width: 400px;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -290,6 +332,8 @@ body {
 .summary-container > p {
   font-size: 1.5rem;
   font-weight: 700;
+  display: flex;
+  justify-content: space-between;
 }
 
 .summary-container > p > span {
