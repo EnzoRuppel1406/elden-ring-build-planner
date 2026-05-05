@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", sans-serif;
+  letter-spacing: 0.25rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #111113;
+  height: 100vh;
+  color: #ddd;
+}
+
+/* Navbar */
+
+.navbar-container {
+  width: 100%;
+  background-color: #27170d;
+  background: linear-gradient(
+    to bottom,
+    #111113 70%,
+    #b89b4c 99%,
+    #c6a85a 100%
+  );
+  display: flex;
+  justify-content: space-around;
+  color: rgba(249, 192, 67, 0.7);
+}
+
+.navbar-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.navbar-logo-container > img {
+  width: 80px;
+  height: 80px;
+  margin-right: 12px;
+}
+
+.navbar-title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-title-container > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(249, 192, 67, 1);
+}
+
+.navbar-title-container > p {
+  font-size: 1.15rem;
+}
+
+.navbar-items-container {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 750px;
+}
+
+.navbar-items-container > li {
+  padding: 10px;
+  border-radius: 8px;
+
+  border: none;
+  transition: border ease-out 500ms;
+}
+
+.navbar-items-container > li > a {
+  font-size: 1.25rem;
+  font-weight: 550;
+  color: #ddd;
+}
+
+.navbar-items-container > li:hover {
+  border: 1px solid #c6a85a;
+}
+
+/* Build Planner */
+
+.build-container {
+  display: flex;
+}
+
+/* Equipment */
+
+.equipment-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 800px;
+  width: 50%;
+  padding: 16px;
+}
+
+.equipment-container > h2 {
+  position: absolute;
+  top: 80px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #c6a85a;
+}
+
+.equipment-container .equipment-character {
+  position: absolute;
+  right: 80px;
+  height: 500px;
+  width: 500px;
+  background-image: url(./images/player.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0) drop-shadow(0 0 18px rgba(212, 175, 55, 0.6));
+}
+
+.equipment-container .equipment-items-container {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 12px;
+  grid-template-areas:
+    "weapon1 weapon2 weapon3 ."
+    "ranged1 ranged2 ranged3 ."
+    "head chest arms legs"
+    "talisman1 talisman2 talisman3 talisman4";
+}
+
+.equipment-container .equipment-items-container .equipment-item {
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.1) 22%,
+    rgba(120, 100, 100, 0.5) 52%,
+    rgba(200, 150, 40, 0.6) 100%
+  );
+  border: 1px solid #b89b4c;
+  width: 120px;
+  height: 120px;
+}
+
+.equipment-container .equipment-items-container .equipment-item.weapon-slot1 {
+  grid-area: weapon1;
+}
+
+.equipment-container .equipment-items-container .equipment-item.weapon-slot2 {
+  grid-area: weapon2;
+}
+
+.equipment-container .equipment-items-container .equipment-item.weapon-slot3 {
+  grid-area: weapon3;
+}
+
+.equipment-container .equipment-items-container .equipment-item.ranged-slot1 {
+  grid-area: ranged1;
+}
+
+.equipment-container .equipment-items-container .equipment-item.ranged-slot2 {
+  grid-area: ranged2;
+}
+
+.equipment-container .equipment-items-container .equipment-item.ranged-slot3 {
+  grid-area: ranged3;
+}
+
+.equipment-container
+  .equipment-items-container
+  .equipment-item.head-armor-slot {
+  grid-area: head;
+}
+.equipment-container
+  .equipment-items-container
+  .equipment-item.chest-armor-slot {
+  grid-area: chest;
+}
+.equipment-container
+  .equipment-items-container
+  .equipment-item.arms-armor-slot {
+  grid-area: arms;
+}
+.equipment-container
+  .equipment-items-container
+  .equipment-item.legs-armor-slot {
+  grid-area: legs;
+}
+
+.equipment-container .equipment-items-container .equipment-item.talisman-slot1 {
+  grid-area: talisman1;
+}
+
+.equipment-container .equipment-items-container .equipment-item.talisman-slot2 {
+  grid-area: talisman2;
+}
+
+.equipment-container .equipment-items-container .equipment-item.talisman-slot3 {
+  grid-area: talisman3;
+}
+
+.equipment-container .equipment-items-container .equipment-item.talisman-slot4 {
+  grid-area: talisman4;
+}
+
+/* Attributes & Leveling */
+
+.atributes-container {
+  width: 600px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.1) 22%,
+    rgba(120, 100, 100, 0.5) 52%,
+    rgba(200, 150, 40, 0.6) 100%
+  );
+  border: 1px solid #b89b4c;
+  margin-top: 80px;
+}
+
+.atributes-container > .stat-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  padding: 12px;
+  color: #c6a85a;
+}
+
+.atributes-container > .stat-container > h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  width: 250px;
+  text-align: left;
+}
+
+.atributes-container > .stat-container > p {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.atributes-container > .stat-container > i {
+  font-size: 2.5rem;
+}
+
+/* Summary */
+
+.summary-container {
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.1) 22%,
+    rgba(120, 100, 100, 0.5) 52%,
+    rgba(200, 150, 40, 0.6) 100%
+  );
+  border: 1px solid #b89b4c;
+  margin-left: 30px;
+  margin-top: 80px;
+  padding: 18px;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  color: #c6a85a;
+}
+
+.summary-container > h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.summary-container > p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.summary-container > p > span {
+  color: #ceca91;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
