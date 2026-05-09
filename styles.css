@@ -287,7 +287,96 @@ body {
   color: #c6a85a;
 }
 
-.atributes-container > .stat-container > h3 {
+.atributes-container > .starting-class-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding: 12px;
+  gap: 15px;
+  color: #c6a85a;
+}
+
+.atributes-container > .starting-class-container > .starting-class-label {
+  font-size: 2rem;
+  font-weight: 300;
+  width: 250px;
+}
+
+.atributes-container > .starting-class-container > .starting-class-selector {
+  position: relative;
+  border: none;
+  background: none;
+  appearance: none;
+  width: 150px;
+  color: #c6a85a;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.atributes-container
+  > .starting-class-container
+  > .starting-class-selector
+  > .starting-class-list {
+  position: absolute;
+  top: 0;
+  list-style: none;
+  max-height: 50px;
+  overflow: hidden;
+  transition: max-height 500ms;
+}
+
+.atributes-container
+  > .starting-class-container
+  > .starting-class-selector
+  > .starting-class-list
+  > .starting-class-option {
+  height: 50px;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  transition:
+    border 0.3s,
+    background-color 0.5s;
+}
+
+.atributes-container
+  > .starting-class-container
+  > .starting-class-selector
+  > .starting-class-list
+  > .starting-class-option.selected:hover {
+  border: 2px solid rgba(212, 175, 55, 0.8);
+  background-color: rgba(10, 10, 10, 0.8);
+  border: 2px solid rgba(212, 175, 55, 0.8);
+  cursor: pointer;
+}
+
+.atributes-container
+  > .starting-class-container
+  > .starting-class-selector.active
+  > .starting-class-list {
+  max-height: 600px;
+  overflow: visible;
+  background-color: rgba(10, 10, 10, 0.8);
+  border: 2px solid rgba(212, 175, 55, 0.8);
+  border-radius: 8px;
+  color: #b89b4c;
+}
+
+.atributes-container
+  > .starting-class-container
+  > .starting-class-selector.active
+  > .starting-class-list
+  > .starting-class-option:hover {
+  border: none;
+  text-decoration: underline #c6a85a;
+  color: #ceca91;
+  cursor: pointer;
+}
+
+.atributes-container > .stat-container > .stat-name {
   font-size: 2rem;
   font-weight: 500;
   width: 250px;
@@ -302,6 +391,11 @@ body {
 
 .atributes-container > .stat-container > i {
   font-size: 2.5rem;
+}
+
+.atributes-container > .stat-container > i:hover {
+  cursor: pointer;
+  color: #ceca91;
 }
 
 /* Summary */

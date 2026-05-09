@@ -120,67 +120,111 @@
         </div>
       </div>
       <div class="atributes-container">
-        <div class="stat-container">
-          <h3>Vigor</h3>
+        <div class="starting-class-container">
+          <p class="starting-class-label">Classe Inicial:</p>
+          <div class="starting-class-selector">
+            <ul class="starting-class-list">
+              <li class="starting-class-option" data-class-option="hero">
+                Heroi
+              </li>
+              <li class="starting-class-option" data-class-option="bandit">
+                Bandido
+              </li>
+              <li class="starting-class-option" data-class-option="astrologer">
+                Astrologo
+              </li>
+              <li class="starting-class-option" data-class-option="warrior">
+                Guerreiro
+              </li>
+              <li class="starting-class-option" data-class-option="prisoner">
+                Prisioneiro
+              </li>
+              <li class="starting-class-option" data-class-option="confessor">
+                Confessor
+              </li>
+              <li class="starting-class-option" data-class-option="vagabond">
+                Vagabundo
+              </li>
+              <li class="starting-class-option" data-class-option="prophet">
+                Profeta
+              </li>
+              <li class="starting-class-option" data-class-option="samurai">
+                Samurai
+              </li>
+              <li class="starting-class-option" data-class-option="wretch">
+                Miseravel
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="stat-container" data-stat="vigor">
+          <p class="stat-name">Vigor</p>
           <i class="fa-regular fa-square-plus"></i>
-          <p class="stat-level">12</p>
+          <p class="stat-level"></p>
           <i class="fa-regular fa-square-minus"></i>
         </div>
-        <div class="stat-container">
-          <h3>Mente</h3>
+        <div class="stat-container" data-stat="mind">
+          <p class="stat-name">Mente</p>
           <i class="fa-regular fa-square-plus"></i>
-          <p class="stat-level">12</p>
+          <p class="stat-level"></p>
           <i class="fa-regular fa-square-minus"></i>
         </div>
-        <div class="stat-container">
-          <h3>Fortitude</h3>
+        <div class="stat-container" data-stat="endurance">
+          <p class="stat-name">Fortitude</p>
           <i class="fa-regular fa-square-plus"></i>
-          <p class="stat-level">12</p>
+          <p class="stat-level"></p>
           <i class="fa-regular fa-square-minus"></i>
         </div>
-        <div class="stat-container">
-          <h3>Força</h3>
+        <div class="stat-container" data-stat="strength">
+          <p class="stat-name">Força</p>
           <i class="fa-regular fa-square-plus"></i>
-          <p class="stat-level">12</p>
+          <p class="stat-level"></p>
           <i class="fa-regular fa-square-minus"></i>
         </div>
-        <div class="stat-container">
-          <h3>Destreza</h3>
+        <div class="stat-container" data-stat="dexterity">
+          <p class="stat-name">Destreza</p>
           <i class="fa-regular fa-square-plus"></i>
-          <p class="stat-level">12</p>
+          <p class="stat-level"></p>
           <i class="fa-regular fa-square-minus"></i>
         </div>
-        <div class="stat-container">
-          <h3>Inteligência</h3>
+        <div class="stat-container" data-stat="intelligence">
+          <p class="stat-name">Inteligência</p>
           <i class="fa-regular fa-square-plus"></i>
-          <p class="stat-level">12</p>
+          <p class="stat-level"></p>
           <i class="fa-regular fa-square-minus"></i>
         </div>
-        <div class="stat-container">
-          <h3>Fé</h3>
+        <div class="stat-container" data-stat="faith">
+          <p class="stat-name">Fé</p>
           <i class="fa-regular fa-square-plus"></i>
-          <p class="stat-level">12</p>
+          <p class="stat-level"></p>
           <i class="fa-regular fa-square-minus"></i>
         </div>
-        <div class="stat-container">
-          <h3>Arcano</h3>
+        <div class="stat-container" data-stat="arcane">
+          <p class="stat-name">Arcano</p>
           <i class="fa-regular fa-square-plus"></i>
-          <p class="stat-level">12</p>
+          <p class="stat-level"></p>
           <i class="fa-regular fa-square-minus"></i>
         </div>
       </div>
       <div class="summary-container">
         <h2>Resumo</h2>
-        <p>Classe Inicial: <span>Guerreiro</span></p>
-        <p>Nivel: <span>150</span></p>
-        <p>Runas necessarias: <span>390000</span></p>
+        <p>Classe Inicial: <span data-summary="class"></span></p>
+        <p>Nivel: <span data-summary="level"></span></p>
+        <p>
+          Runas necessarias:
+          <span data-summary="runes-needed"></span>
+        </p>
 
-        <p>Build: <span>Forca/ Fe</span></p>
-        <p>HP: <span>2476</span></p>
-        <p>FP: <span>197</span></p>
+        <p>Build: <span data-summary="build-type"></span></p>
+        <p>HP: <span data-summary="hp">2476</span></p>
+        <p>FP: <span data-summary="fp">197</span></p>
 
-        <p>Arma Principal: <span>Zweihander</span></p>
-        <p>Carga de equipamento: <span>Medio</span></p>
+        <p>
+          Arma Principal: <span data-summary="main-weapon"></span>
+        </p>
+        <p>
+          Carga de equipamento: <span data-summary="equip-load">/span>
+        </p>
       </div>
     </div>
 
