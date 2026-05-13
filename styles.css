@@ -262,7 +262,7 @@ body {
 
 /* Attributes & Leveling */
 
-.atributes-container {
+.attributes-container {
   max-width: 500px;
   width: 100%;
   display: flex;
@@ -278,7 +278,7 @@ body {
   border: 1px solid #b89b4c;
 }
 
-.atributes-container > .stat-container {
+.attributes-container > .attribute-container {
   display: flex;
   flex-direction: row;
   font-size: 2rem;
@@ -287,7 +287,7 @@ body {
   color: #c6a85a;
 }
 
-.atributes-container > .starting-class-container {
+.attributes-container > .starting-class-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -297,13 +297,13 @@ body {
   color: #c6a85a;
 }
 
-.atributes-container > .starting-class-container > .starting-class-label {
+.attributes-container > .starting-class-container > .starting-class-label {
   font-size: 2rem;
   font-weight: 300;
   width: 250px;
 }
 
-.atributes-container > .starting-class-container > .starting-class-selector {
+.attributes-container > .starting-class-container > .starting-class-selector {
   position: relative;
   border: none;
   background: none;
@@ -315,7 +315,7 @@ body {
   text-align: center;
 }
 
-.atributes-container
+.attributes-container
   > .starting-class-container
   > .starting-class-selector
   > .starting-class-list {
@@ -327,7 +327,7 @@ body {
   transition: max-height 500ms;
 }
 
-.atributes-container
+.attributes-container
   > .starting-class-container
   > .starting-class-selector
   > .starting-class-list
@@ -342,7 +342,7 @@ body {
     background-color 0.5s;
 }
 
-.atributes-container
+.attributes-container
   > .starting-class-container
   > .starting-class-selector
   > .starting-class-list
@@ -353,7 +353,7 @@ body {
   cursor: pointer;
 }
 
-.atributes-container
+.attributes-container
   > .starting-class-container
   > .starting-class-selector.active
   > .starting-class-list {
@@ -365,7 +365,7 @@ body {
   color: #b89b4c;
 }
 
-.atributes-container
+.attributes-container
   > .starting-class-container
   > .starting-class-selector.active
   > .starting-class-list
@@ -376,24 +376,24 @@ body {
   cursor: pointer;
 }
 
-.atributes-container > .stat-container > .stat-name {
+.attributes-container > .attribute-container > .attribute-name {
   font-size: 2rem;
   font-weight: 500;
   width: 250px;
   text-align: left;
 }
 
-.atributes-container > .stat-container > p {
+.attributes-container > .attribute-container > p {
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
 }
 
-.atributes-container > .stat-container > i {
+.attributes-container > .attribute-container > i {
   font-size: 2.5rem;
 }
 
-.atributes-container > .stat-container > i:hover {
+.attributes-container > .attribute-container > i:hover {
   cursor: pointer;
   color: #ceca91;
 }
@@ -433,5 +433,5 @@ body {
 .summary-container > p > span {
   color: #ceca91;
   font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
